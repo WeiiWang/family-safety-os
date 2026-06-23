@@ -1,0 +1,936 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>家安老後工具庫｜父母突然需要照顧？先把第一步整理清楚</title>
+    <meta
+      name="description"
+      content="家安老後工具庫整理台灣家庭長照申請第一步、1966 通話準備表、到府評估準備表與出院前長照銜接 checklist。"
+    />
+    <style>
+      :root {
+        --bg: #ffffff;
+        --surface: #f6fbfb;
+        --surface-strong: #eaf6f5;
+        --teal: #006d6a;
+        --teal-dark: #06484c;
+        --teal-soft: #dff2f0;
+        --coral: #ff6b5f;
+        --ink: #12343b;
+        --muted: #5e747b;
+        --line: #d8e6e6;
+        --shadow: 0 20px 60px rgba(5, 72, 76, 0.12);
+        --radius: 8px;
+        --max: 1180px;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--ink);
+        font-family:
+          -apple-system, BlinkMacSystemFont, "PingFang TC", "Noto Sans TC",
+          "Microsoft JhengHei", sans-serif;
+        font-size: 16px;
+        line-height: 1.65;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .site-header {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        border-bottom: 1px solid var(--line);
+        background: rgba(255, 255, 255, 0.94);
+        backdrop-filter: blur(12px);
+      }
+
+      .nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: var(--max);
+        min-height: 72px;
+        margin: 0 auto;
+        padding: 0 24px;
+        gap: 24px;
+      }
+
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        min-width: 220px;
+      }
+
+      .brand-mark {
+        display: grid;
+        place-items: center;
+        width: 42px;
+        height: 42px;
+        border: 2px solid var(--teal);
+        border-radius: 8px;
+        color: var(--coral);
+        background: #fff;
+      }
+
+      .brand-name {
+        display: block;
+        color: var(--teal-dark);
+        font-size: 20px;
+        font-weight: 800;
+        line-height: 1.1;
+      }
+
+      .brand-sub {
+        display: block;
+        margin-top: 2px;
+        color: var(--muted);
+        font-size: 13px;
+        line-height: 1.2;
+      }
+
+      .nav-links {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+        color: #203f45;
+        font-size: 15px;
+        font-weight: 650;
+      }
+
+      .nav-links a {
+        padding: 24px 0 21px;
+        border-bottom: 3px solid transparent;
+      }
+
+      .nav-links a:hover,
+      .nav-links a:focus-visible {
+        border-color: var(--teal);
+        outline: none;
+      }
+
+      .header-actions {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        color: var(--teal-dark);
+        font-size: 14px;
+        font-weight: 700;
+        white-space: nowrap;
+      }
+
+      .trust {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        min-height: 52px;
+        padding: 0 22px;
+        border: 1px solid var(--teal);
+        border-radius: var(--radius);
+        color: var(--teal);
+        background: #fff;
+        font-size: 17px;
+        font-weight: 800;
+        line-height: 1;
+        transition:
+          transform 160ms ease,
+          box-shadow 160ms ease,
+          background 160ms ease;
+      }
+
+      .button:hover,
+      .button:focus-visible {
+        transform: translateY(-1px);
+        box-shadow: 0 14px 30px rgba(0, 109, 106, 0.14);
+        outline: none;
+      }
+
+      .button.primary {
+        color: #fff;
+        background: var(--teal);
+        box-shadow: 0 16px 34px rgba(0, 109, 106, 0.22);
+      }
+
+      .button.header {
+        min-height: 42px;
+        padding: 0 16px;
+        color: #fff;
+        background: var(--teal);
+        font-size: 14px;
+      }
+
+      .page-section {
+        max-width: var(--max);
+        margin: 0 auto;
+        padding: 0 24px;
+      }
+
+      .hero {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(420px, 0.86fr);
+        gap: 58px;
+        align-items: center;
+        min-height: 0;
+        padding-top: 42px;
+        padding-bottom: 28px;
+      }
+
+      h1,
+      h2,
+      h3,
+      p {
+        margin-top: 0;
+      }
+
+      h1 {
+        margin-bottom: 22px;
+        color: var(--teal-dark);
+        font-size: clamp(44px, 6vw, 76px);
+        font-weight: 900;
+        line-height: 1.13;
+      }
+
+      .hero-copy {
+        max-width: 590px;
+        margin-bottom: 28px;
+        color: #264a51;
+        font-size: 21px;
+        line-height: 1.8;
+      }
+
+      .hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+        margin-bottom: 18px;
+      }
+
+      .micro-note {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        color: #47666d;
+        font-size: 14px;
+      }
+
+      .tool-preview {
+        border: 1px solid #c8dfdf;
+        border-radius: var(--radius);
+        background: linear-gradient(135deg, #f5fbfb 0%, #ffffff 58%);
+        box-shadow: var(--shadow);
+        overflow: hidden;
+      }
+
+      .tool-head {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        padding: 24px;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .tool-title {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+      }
+
+      .icon-disc {
+        display: grid;
+        place-items: center;
+        width: 54px;
+        height: 54px;
+        border-radius: 50%;
+        color: #fff;
+        background: var(--teal);
+      }
+
+      .tool-title h2 {
+        margin-bottom: 2px;
+        color: var(--teal-dark);
+        font-size: 24px;
+        line-height: 1.25;
+      }
+
+      .tool-title p,
+      .tool-count span {
+        margin: 0;
+        color: var(--muted);
+        font-size: 14px;
+      }
+
+      .tool-count {
+        min-width: 88px;
+        padding: 10px 12px;
+        border-radius: var(--radius);
+        background: var(--teal-soft);
+        color: var(--teal-dark);
+        text-align: center;
+        font-weight: 800;
+      }
+
+      .checklist-table {
+        padding: 0 18px 18px;
+      }
+
+      .check-row {
+        display: grid;
+        grid-template-columns: 28px minmax(0, 1fr) auto;
+        gap: 12px;
+        align-items: center;
+        min-height: 48px;
+        padding: 10px 2px;
+        border-bottom: 1px solid #edf3f3;
+        color: #243f45;
+        font-size: 15px;
+      }
+
+      .check-row:last-child {
+        border-bottom: none;
+      }
+
+      .box {
+        display: grid;
+        place-items: center;
+        width: 20px;
+        height: 20px;
+        border: 2px solid #a7b9bd;
+        border-radius: 4px;
+        color: #fff;
+        background: #fff;
+      }
+
+      .check-row.done .box {
+        border-color: var(--teal);
+        background: var(--teal);
+      }
+
+      .status {
+        padding: 4px 8px;
+        border-radius: 6px;
+        background: #edf3f4;
+        color: #4f656b;
+        font-size: 13px;
+        font-weight: 800;
+      }
+
+      .done .status {
+        background: #d9f1e7;
+        color: #116646;
+      }
+
+      .tool-foot {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 15px 20px;
+        border-top: 1px solid var(--line);
+        color: var(--teal);
+        font-size: 15px;
+        font-weight: 800;
+      }
+
+      .split-row {
+        display: grid;
+        grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+        gap: 32px;
+        align-items: start;
+      }
+
+      .section-title {
+        margin-bottom: 22px;
+        color: var(--teal-dark);
+        font-size: 29px;
+        line-height: 1.25;
+      }
+
+      .situations {
+        padding-bottom: 24px;
+      }
+
+      .situation-grid,
+      .downloads-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 16px;
+      }
+
+      .situation,
+      .download-card {
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        background: #fff;
+        box-shadow: 0 8px 22px rgba(18, 52, 59, 0.04);
+      }
+
+      .situation {
+        display: grid;
+        grid-template-columns: 62px minmax(0, 1fr);
+        gap: 14px;
+        min-height: 132px;
+        padding: 20px;
+      }
+
+      .situation-icon,
+      .download-icon {
+        display: grid;
+        place-items: center;
+        width: 54px;
+        height: 54px;
+        border-radius: 50%;
+        color: var(--teal);
+        background: var(--surface-strong);
+      }
+
+      .situation h3,
+      .download-card h3 {
+        margin-bottom: 6px;
+        color: var(--teal-dark);
+        font-size: 19px;
+        line-height: 1.3;
+      }
+
+      .situation p,
+      .download-card p {
+        margin-bottom: 14px;
+        color: var(--muted);
+        font-size: 14px;
+      }
+
+      .text-link {
+        color: var(--teal);
+        font-size: 14px;
+        font-weight: 850;
+      }
+
+      .downloads {
+        padding-top: 8px;
+        padding-bottom: 34px;
+      }
+
+      .download-card {
+        min-height: 178px;
+        padding: 22px;
+      }
+
+      .download-top {
+        display: flex;
+        align-items: flex-start;
+        gap: 16px;
+      }
+
+      .download-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        color: var(--teal);
+        font-size: 16px;
+        font-weight: 900;
+      }
+
+      .download-card.featured .download-link {
+        color: var(--coral);
+      }
+
+      .faq-source {
+        display: grid;
+        grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.25fr);
+        gap: 30px;
+        align-items: stretch;
+        margin-bottom: 28px;
+        padding: 24px;
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        background: var(--surface);
+      }
+
+      .faq-list {
+        display: grid;
+        gap: 8px;
+      }
+
+      details {
+        border: 1px solid #e4eeee;
+        border-radius: 6px;
+        background: #fff;
+      }
+
+      summary {
+        cursor: pointer;
+        padding: 13px 16px;
+        color: #25464d;
+        font-size: 15px;
+        font-weight: 750;
+      }
+
+      details p {
+        margin: 0;
+        padding: 0 16px 16px;
+        color: var(--muted);
+        font-size: 14px;
+      }
+
+      .source-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
+      }
+
+      .source-item {
+        padding-left: 18px;
+        border-left: 1px solid #cfdfdf;
+      }
+
+      .source-item h3 {
+        margin-bottom: 6px;
+        color: var(--teal-dark);
+        font-size: 17px;
+      }
+
+      .source-item p {
+        margin-bottom: 8px;
+        color: var(--muted);
+        font-size: 14px;
+      }
+
+      .notice {
+        display: flex;
+        align-items: flex-start;
+        gap: 12px;
+        margin-bottom: 40px;
+        padding: 16px 18px;
+        border-radius: var(--radius);
+        background: #f0f8f7;
+        color: #3d5b62;
+        font-size: 14px;
+      }
+
+      footer {
+        border-top: 1px solid var(--line);
+        color: #6d8186;
+        font-size: 14px;
+      }
+
+      .footer-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: var(--max);
+        margin: 0 auto;
+        padding: 22px 24px;
+      }
+
+      svg {
+        flex: 0 0 auto;
+      }
+
+      @media (max-width: 980px) {
+        .nav {
+          align-items: flex-start;
+          flex-direction: column;
+          padding-top: 14px;
+          padding-bottom: 14px;
+        }
+
+        .nav-links,
+        .header-actions {
+          width: 100%;
+          justify-content: flex-start;
+          overflow-x: auto;
+          padding-bottom: 4px;
+        }
+
+        .nav-links a {
+          padding: 4px 0 8px;
+        }
+
+        .hero,
+        .split-row,
+        .faq-source {
+          grid-template-columns: 1fr;
+        }
+
+        .hero {
+          min-height: auto;
+          padding-top: 38px;
+        }
+      }
+
+      @media (max-width: 760px) {
+        .page-section,
+        .nav {
+          padding-left: 18px;
+          padding-right: 18px;
+        }
+
+        .nav-links {
+          gap: 20px;
+        }
+
+        .trust {
+          display: none;
+        }
+
+        h1 {
+          font-size: 42px;
+        }
+
+        .hero-copy {
+          font-size: 18px;
+        }
+
+        .button {
+          width: 100%;
+        }
+
+        .tool-head,
+        .tool-foot,
+        .footer-inner {
+          align-items: flex-start;
+          flex-direction: column;
+        }
+
+        .tool-head {
+          gap: 16px;
+        }
+
+        .check-row {
+          grid-template-columns: 28px minmax(0, 1fr);
+        }
+
+        .status {
+          grid-column: 2;
+          width: fit-content;
+        }
+
+        .situation-grid,
+        .downloads-grid,
+        .source-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav" aria-label="主要導覽">
+        <a class="brand" href="#top" aria-label="家安老後工具庫首頁">
+          <span class="brand-mark" aria-hidden="true">
+            <svg width="25" height="25" viewBox="0 0 24 24" fill="none">
+              <path d="M3 10.8 12 3l9 7.8v9.4a1 1 0 0 1-1 1h-5.2v-6h-5.6v6H4a1 1 0 0 1-1-1v-9.4Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
+              <path d="M12 14.5c-2.8-1.7-4-3-4-4.6A2.1 2.1 0 0 1 12 8.7a2.1 2.1 0 0 1 4 1.2c0 1.6-1.2 2.9-4 4.6Z" fill="currentColor" />
+            </svg>
+          </span>
+          <span>
+            <span class="brand-name">家安老後工具庫</span>
+            <span class="brand-sub">陪你走好長照的第一步</span>
+          </span>
+        </a>
+        <div class="nav-links">
+          <a href="../family-safety-os/index.html">總入口</a>
+          <a href="#situations">情境指南</a>
+          <a href="#downloads">下載工具</a>
+          <a href="#sources">官方來源</a>
+          <a href="#faq">常見問題</a>
+        </div>
+        <div class="header-actions">
+          <span class="trust">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M12 3 20 6v6c0 5-3.4 7.8-8 9-4.6-1.2-8-4-8-9V6l8-3Z" stroke="currentColor" stroke-width="2" />
+              <path d="m8.5 12 2.2 2.2 4.8-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            資料來源標註
+          </span>
+          <a class="button header" href="#downloads">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M6 3h12v18l-6-3-6 3V3Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
+            </svg>
+            收藏本頁
+          </a>
+        </div>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="page-section hero">
+        <div>
+          <h1>父母突然需要照顧？先把第一步整理清楚</h1>
+          <p class="hero-copy">
+            面對長照申請，家人常常不是不願意處理，而是不知道從哪裡開始。
+            這裡先把 1966 通話、到府評估與出院銜接整理成可直接使用的工具。
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="../../../output/pdf/long-term-care-toolkit.pdf">
+              <svg width="23" height="23" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M12 3v12m0 0 5-5m-5 5-5-5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M4 19h16" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" />
+              </svg>
+              下載長照申請工具包
+            </a>
+            <a class="button" href="../../../output/pdf/1966-call-prep.pdf">
+              <svg width="23" height="23" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M22 16.9v2.7a2 2 0 0 1-2.2 2A19.8 19.8 0 0 1 3.4 5.2 2 2 0 0 1 5.4 3h2.7a2 2 0 0 1 2 1.7l.4 2.6a2 2 0 0 1-.6 1.8L8.8 10a16 16 0 0 0 5.2 5.2l.9-1.1a2 2 0 0 1 1.8-.6l2.6.4a2 2 0 0 1 1.7 2Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
+              </svg>
+              查看 1966 通話準備表
+            </a>
+          </div>
+          <p class="micro-note">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M12 3 20 6v6c0 5-3.4 7.8-8 9-4.6-1.2-8-4-8-9V6l8-3Z" stroke="currentColor" stroke-width="2" />
+              <path d="m8.5 12 2.2 2.2 4.8-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            所有工具免費下載；內容只做資料整理，不取代官方評估。
+          </p>
+        </div>
+
+        <aside class="tool-preview" aria-label="長照申請檢查清單預覽">
+          <div class="tool-head">
+            <div class="tool-title">
+              <span class="icon-disc" aria-hidden="true">
+                <svg width="29" height="29" viewBox="0 0 24 24" fill="none">
+                  <path d="M8 4h8l1 2h3v15H4V6h3l1-2Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
+                  <path d="M9 11h6M9 15h6" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                </svg>
+              </span>
+              <div>
+                <h2>長照申請檢查清單</h2>
+                <p>跟著清單準備，申請更順利</p>
+              </div>
+            </div>
+            <div class="tool-count">
+              共 6 項<br />
+              <span>已完成 2 項</span>
+            </div>
+          </div>
+          <div class="checklist-table">
+            <div class="check-row done">
+              <span class="box">✓</span>
+              <span>確認長輩居住縣市與主要照顧者</span>
+              <span class="status">已完成</span>
+            </div>
+            <div class="check-row done">
+              <span class="box">✓</span>
+              <span>整理最近跌倒、出院或生活功能變化</span>
+              <span class="status">已完成</span>
+            </div>
+            <div class="check-row">
+              <span class="box"></span>
+              <span>準備 1966 通話問題清單</span>
+              <span class="status">待完成</span>
+            </div>
+            <div class="check-row">
+              <span class="box"></span>
+              <span>記錄吃飯、洗澡、如廁、行走狀況</span>
+              <span class="status">待完成</span>
+            </div>
+            <div class="check-row">
+              <span class="box"></span>
+              <span>確認出院銜接、輔具或交通需求</span>
+              <span class="status">待完成</span>
+            </div>
+            <div class="check-row">
+              <span class="box"></span>
+              <span>建立家庭照護分工與資料夾</span>
+              <span class="status">待完成</span>
+            </div>
+          </div>
+          <a class="tool-foot" href="#downloads">
+            <span>查看完整工具與 checklist</span>
+            <span>→</span>
+          </a>
+        </aside>
+      </section>
+
+      <section class="page-section split-row">
+        <div id="situations" class="situations">
+          <h2 class="section-title">3 種常見情境</h2>
+          <div class="situation-grid">
+            <article class="situation">
+              <span class="situation-icon" aria-hidden="true">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+                  <path d="M4 21V8l8-5 8 5v13" stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
+                  <path d="M9 21v-7h6v7M8 10h.01M16 10h.01" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                </svg>
+              </span>
+              <div>
+                <h3>剛出院</h3>
+                <p>出院後需要照顧安排，不確定是否符合長照資格。</p>
+                <a class="text-link" href="../../../output/pdf/discharge-care-transition.pdf">查看指引 →</a>
+              </div>
+            </article>
+            <article class="situation">
+              <span class="situation-icon" aria-hidden="true">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+                  <path d="M13 4a2 2 0 1 0 0 4 2 2 0 0 0 0-4Z" stroke="currentColor" stroke-width="2" />
+                  <path d="m11 9-2 4 3 2 1 5M14 10l3 2M9 13l-3 2M17 20l-3-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </span>
+              <div>
+                <h3>跌倒或行動不便</h3>
+                <p>活動變得困難，日常生活需要協助。</p>
+                <a class="text-link" href="../../../output/pdf/home-assessment-prep.pdf">查看指引 →</a>
+              </div>
+            </article>
+            <article class="situation">
+              <span class="situation-icon" aria-hidden="true">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+                  <path d="M12 3a7 7 0 0 0-7 7v2l-2 3h3v3a3 3 0 0 0 3 3h3v-4" stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
+                  <path d="M12 7c2.8 0 5 2.2 5 5 0 2-1.2 3.7-3 4.5V21h5" stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
+                  <path d="M10 10h.01M14 10h.01" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                </svg>
+              </span>
+              <div>
+                <h3>疑似失智</h3>
+                <p>記憶力變差、重複詢問，需要專業與照護資源協助。</p>
+                <a class="text-link" href="#faq">查看指引 →</a>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div id="downloads" class="downloads">
+          <h2 class="section-title">3 款實用工具免費下載</h2>
+          <div class="downloads-grid">
+            <article class="download-card">
+              <div class="download-top">
+                <span class="download-icon" aria-hidden="true">
+                  <svg width="30" height="30" viewBox="0 0 24 24" fill="none">
+                    <path d="M6 3h8l4 4v14H6V3Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
+                    <path d="M14 3v5h5M9 13h6M9 17h6" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                  </svg>
+                </span>
+                <div>
+                  <h3>長照申請工具包</h3>
+                  <p>三份清單整合，一次準備申請、評估與出院銜接。</p>
+                  <a class="download-link" href="../../../output/pdf/long-term-care-toolkit.pdf">下載 PDF</a>
+                </div>
+              </div>
+            </article>
+            <article class="download-card featured">
+              <div class="download-top">
+                <span class="download-icon" aria-hidden="true">
+                  <svg width="30" height="30" viewBox="0 0 24 24" fill="none">
+                    <path d="M22 16.9v2.7a2 2 0 0 1-2.2 2A19.8 19.8 0 0 1 3.4 5.2 2 2 0 0 1 5.4 3h2.7a2 2 0 0 1 2 1.7l.4 2.6a2 2 0 0 1-.6 1.8L8.8 10a16 16 0 0 0 5.2 5.2l.9-1.1a2 2 0 0 1 1.8-.6l2.6.4a2 2 0 0 1 1.7 2Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
+                  </svg>
+                </span>
+                <div>
+                  <h3>1966 通話準備表</h3>
+                  <p>聯繫長照專線前，先把家中狀況整理清楚。</p>
+                  <a class="download-link" href="../../../output/pdf/1966-call-prep.pdf">下載 PDF</a>
+                </div>
+              </div>
+            </article>
+            <article class="download-card">
+              <div class="download-top">
+                <span class="download-icon" aria-hidden="true">
+                  <svg width="30" height="30" viewBox="0 0 24 24" fill="none">
+                    <path d="M5 4h10l4 4v12H5V4Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
+                    <path d="M15 4v5h5M8 13h5M8 17h8" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                  </svg>
+                </span>
+                <div>
+                  <h3>到府評估準備表</h3>
+                  <p>把吃飯、洗澡、行動、照顧者負擔整理成可描述的紀錄。</p>
+                  <a class="download-link" href="../../../output/pdf/home-assessment-prep.pdf">下載 PDF</a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="page-section faq-source">
+        <div id="faq">
+          <h2 class="section-title">常見問題</h2>
+          <div class="faq-list">
+            <details>
+              <summary>長照申請需要多久時間？</summary>
+              <p>實際時程會依縣市、案件量與評估安排不同。建議通話後記下承辦單位、下一步與預計聯絡時間。</p>
+            </details>
+            <details>
+              <summary>家裡有外籍看護，可以申請長照嗎？</summary>
+              <p>依衛福部申請頁 FAQ，有聘僱外籍看護的家庭仍可能申請部分服務，例如專業服務、交通接送、輔具與無障礙環境評估，以及外籍看護請假時的喘息服務。實際仍需官方評估。</p>
+            </details>
+            <details>
+              <summary>長照服務是免費的嗎？</summary>
+              <p>長照服務通常涉及政府給付與自付額，實際補助與費用需依長照需要等級、身分別、服務項目與官方規定確認。</p>
+            </details>
+            <details>
+              <summary>如果不符合長照資格，還有其他資源嗎？</summary>
+              <p>仍可詢問地方政府或社區資源，例如社區照顧關懷據點、巷弄長照站等。不同地區資源不同，建議以所在地官方資訊為準。</p>
+            </details>
+          </div>
+        </div>
+
+        <div id="sources">
+          <h2 class="section-title">官方資訊與來源</h2>
+          <div class="source-grid">
+            <article class="source-item">
+              <h3>1966 長照專線</h3>
+              <p>長照申請與服務諮詢入口。</p>
+              <a class="text-link" href="https://1966.gov.tw/LTC/mp-207.html">前往官網 →</a>
+            </article>
+            <article class="source-item">
+              <h3>長期照顧服務申請</h3>
+              <p>申請流程、服務對象、FAQ。</p>
+              <a class="text-link" href="https://1966.gov.tw/LTC/cp-6533-70777-207.html">前往查看 →</a>
+            </article>
+            <article class="source-item">
+              <h3>各縣市長照管理中心</h3>
+              <p>查詢所在地聯絡方式。</p>
+              <a class="text-link" href="https://1966.gov.tw/LTC/lp-6534-207.html">前往查詢 →</a>
+            </article>
+            <article class="source-item">
+              <h3>長照服務資源地圖</h3>
+              <p>查詢長照據點與資源。</p>
+              <a class="text-link" href="https://ltcpap.mohw.gov.tw">前往地圖 →</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="page-section">
+        <div class="notice">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M12 3 20 6v6c0 5-3.4 7.8-8 9-4.6-1.2-8-4-8-9V6l8-3Z" stroke="currentColor" stroke-width="2" />
+            <path d="m8.5 12 2.2 2.2 4.8-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+          <span>
+            本頁只做資料整理與家庭行動清單，不取代政府評估、醫療診斷、照管專員或專業法律/財務建議。
+            長照資格、給付額度、申請流程與縣市資源可能變動，實際申請請以官方公告為準。
+          </span>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-inner">
+        <span>我們重視資料來源與家庭隱私；本頁不會追蹤或收集個人資料。</span>
+        <span>© 2026 家安老後工具庫</span>
+      </div>
+    </footer>
+  </body>
+</html>
