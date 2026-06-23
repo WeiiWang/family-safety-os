@@ -236,7 +236,7 @@
 
       .path-card,
       .download-card,
-      .metric {
+      .usage-card {
         border: 1px solid var(--line);
         border-radius: var(--radius);
         background: #fff;
@@ -364,7 +364,7 @@
         font-weight: 850;
       }
 
-      .validation {
+      .usage-note {
         margin-bottom: 34px;
         padding: 28px;
         border: 1px solid var(--line);
@@ -372,18 +372,18 @@
         background: var(--surface);
       }
 
-      .metric-grid {
+      .usage-grid {
         display: grid;
         grid-template-columns: repeat(4, minmax(0, 1fr));
         gap: 14px;
       }
 
-      .metric {
+      .usage-card {
         min-height: 136px;
         padding: 18px;
       }
 
-      .metric strong {
+      .usage-card strong {
         display: block;
         margin-bottom: 8px;
         color: var(--teal-dark);
@@ -391,7 +391,7 @@
         line-height: 1.15;
       }
 
-      .metric span {
+      .usage-card span {
         color: var(--muted);
         font-size: 14px;
       }
@@ -450,7 +450,7 @@
           grid-template-columns: 1fr;
         }
 
-        .metric-grid {
+        .usage-grid {
           grid-template-columns: repeat(2, minmax(0, 1fr));
         }
       }
@@ -485,7 +485,7 @@
           width: 100%;
         }
 
-        .metric-grid {
+        .usage-grid {
           grid-template-columns: 1fr;
         }
 
@@ -515,7 +515,7 @@
         <div class="nav-links">
           <a href="#paths">三大工具</a>
           <a href="#downloads">下載</a>
-          <a href="#validation">驗證指標</a>
+          <a href="#usage">使用提醒</a>
           <a href="../family-documents/index.html">文件整理</a>
         </div>
       </nav>
@@ -526,7 +526,7 @@
         <div class="hero-inner">
           <h1>父母變老之後，家裡最常出事的不是單一問題</h1>
           <p class="hero-copy">
-            長照申請、防詐、醫療文件整理，通常會一起出現。這個 MVP 先把三件最有搜尋意圖、最能立即幫到家庭的事做成可下載工具。
+            長照申請、防詐、家庭文件整理，常常會在同一個家庭裡一起發生。這裡先把三件最常需要立刻處理的事，整理成可下載、可列印、可帶去討論的工具。
           </p>
           <div class="hero-actions">
             <a class="button primary" href="#paths">
@@ -548,7 +548,7 @@
       </section>
 
       <section id="paths" class="page-section paths">
-        <h2 class="section-title">先做這三條，因為它們都是真實家庭會搜尋的問題</h2>
+        <h2 class="section-title">三個入口，從你現在遇到的狀況開始</h2>
         <div class="path-grid">
           <article class="path-card">
             <span class="path-tag">A｜長照申請</span>
@@ -607,24 +607,24 @@
         </div>
       </section>
 
-      <section id="validation" class="page-section validation">
-        <h2 class="section-title">接下來要驗證的不是漂亮，是有沒有人真的用</h2>
-        <div class="metric-grid">
-          <div class="metric">
-            <strong>搜尋</strong>
-            <span>長照申請、防詐、住院準備、陪診問題清單能不能帶來自然流量。</span>
+      <section id="usage" class="page-section usage-note">
+        <h2 class="section-title">使用前先知道</h2>
+        <div class="usage-grid">
+          <div class="usage-card">
+            <strong>整理</strong>
+            <span>把家人需要討論的資訊、問題與文件位置先集中起來。</span>
           </div>
-          <div class="metric">
-            <strong>下載</strong>
-            <span>PDF 下載率是否高於一般文章，代表工具有立即價值。</span>
+          <div class="usage-card">
+            <strong>準備</strong>
+            <span>回診、申請長照或處理可疑訊息前，先用表格降低慌亂。</span>
           </div>
-          <div class="metric">
-            <strong>回覆</strong>
-            <span>使用者是否願意留言、寄信或加入 LINE 要更多表格。</span>
+          <div class="usage-card">
+            <strong>確認</strong>
+            <span>重要決定仍要向醫療、長照、警方、銀行或法律專業確認。</span>
           </div>
-          <div class="metric">
-            <strong>轉傳</strong>
-            <span>工具是否被轉進家庭 LINE 群，這比觀看數更接近真需求。</span>
+          <div class="usage-card">
+            <strong>保護</strong>
+            <span>不要把完整病歷、證件、金融資料或敏感個資交給陌生工具。</span>
           </div>
         </div>
       </section>
@@ -636,7 +636,7 @@
             <path d="M12 9v5M12 17h.01" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" />
           </svg>
           <span>
-            這是一個可驗證 MVP，不是醫療、法律、金融或長照專業服務。每個工具都要守住資料隱私與專業邊界，再逐步擴大。
+            本站提供家庭資料整理與問題準備工具，不取代醫療、法律、金融或長照專業服務。遇到急症、詐騙、法律或照護危機，請直接聯絡官方或專業單位。
           </span>
         </div>
       </section>
@@ -644,7 +644,7 @@
 
     <footer>
       <div class="footer-inner">
-        <span>家安老後工具庫｜先用工具驗證需求，再決定要不要產品化。</span>
+        <span>家安老後工具庫｜把長照、防詐與家庭文件整理成可立即使用的工具。</span>
         <span>© 2026</span>
       </div>
     </footer>
